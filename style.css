@@ -1,0 +1,293 @@
+:root{
+    --primary-color: #648880;
+    --secondary-color: #293f50;
+    --extra-color:#293f5077;
+    --gradient: linear-gradient(to right, #a1d3b0, #f6f1d3);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'lato', Verdana, sans-serif;
+    color: var(--primary-color);
+}
+h1,
+h2,
+h3
+p{
+    margin-bottom: 1.5rem;
+}
+
+h1{
+    font-weight: 300;
+}
+
+h2,
+.staff-member h3{
+    color: var(--primary-color);
+    text-transform: uppercase;
+    font-size: 1rem;
+}
+h3,
+.staff-member h2{
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+.staff-member h2{
+    color: var(--primary-color);
+    text-transform: capitalize;
+}
+
+p{
+    font-size: 1.1rem;
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+/* Header Style */
+header,
+footer{
+    background-color: var(--secondary-color);
+}
+.container{
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+header.container{
+    text-align: center;
+}
+
+.logo{
+    border-top: 5px solid var(--primary-color);
+    color: white;
+    font-weight: 100;
+    text-transform: uppercase;
+    text-align: left;
+    font-size: 3rem;
+    width: 165px;
+    margin: 0 auto 4rem;
+    padding-top: 1rem;
+    text-align: left;
+}
+
+.tag-line{
+    font-size: 1.75rem;
+}
+
+nav li{
+    display: inline;
+}
+
+
+.menu-link{
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 1.2rem;
+    padding: 0 0.5rem;
+    transition: color 0.3s; font-size: 3sec;
+}
+.menu-link:hover{
+    background-color: var(--primary-color);
+}
+
+.menu{
+    padding-bottom: 4rem;
+}
+
+/* Header Style */
+.hero{
+    background-color: var(--secondary-color);
+    text-align: center;
+    margin-bottom: 8rem;
+}
+.hero h1{
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.hero p{
+    font-weight: 100;
+    font-size: 2rem;
+}
+
+button{
+    border: 2px solid white;
+    background-color: inherit;
+    color: white;
+    padding: 1.75rem 2.25rem;
+    text-transform: uppercase;
+    font-size: 1.25rem;
+    margin-bottom: 4rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+button:hover{
+    background-color: white;
+    color: var(--primary-color);
+}
+
+ /* Mian Style */
+
+article{
+    margin-bottom: 4rem;
+}
+
+article img{
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 2rem;
+}
+
+/* Footer Styles  */
+footer{
+    padding: 4rem 0 2rem;
+}
+.copy-right{
+    font-size: 0.8rem;
+    margin-bottom: 1.5rem;
+}
+
+footer  .menu-link{
+    text-transform: capitalize;
+    font-weight: 300;
+    font-size: 1rem;
+}
+
+footer li:first-child .menu-link{
+    padding-left: 0;
+}
+
+/* Staff page Styles */
+.page-header{
+    background-image: var(--gradient);
+    text-align: center;
+    padding: 3rem 0;
+    margin-bottom: 3rem;
+}
+
+.page-header p{
+    line-height: 2;
+    font-size: 1.2rem;
+}
+
+.page-header h1{
+    font-size: 2.25rem;
+    font-weight: 300;
+}
+
+
+/* Staff Card Styles */
+.staff-card{
+    text-align: center;
+    border: 1px solid lightgray;
+    margin: 8rem 3rem;
+}
+.staff-member img{
+    position: relative;
+    top: -75px;
+    width: 150px;
+    border-radius: 100%;
+}
+
+.staff-details{
+    position: relative;
+    top: -60px;
+    font-size: 1.2rem;
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+.staff-details li{
+    list-style-type: none;
+}
+
+
+@media only screen and (min-width: 600px){
+    header  .container{
+        display: flex;
+        justify-content: space-between;
+        height: 200px;
+    }
+
+    .logo{
+        margin: 0;
+    }
+
+    .menu{
+        align-self: flex-end;
+        text-align: right;
+    }
+    .menu-link{
+        font-size: 0.9rem;
+    }
+    .tag-line{
+        font-size: 1.3rem;
+    }
+
+    .menu-link:last-child{
+        padding-right: 0;
+    }
+
+    /* Header Style */
+    .hero p{
+        font-size: 1.5rem;
+    }
+
+    button{
+        font-size: 1rem;
+        padding: 1rem 1.5rem;
+        border-width: 1px;
+    }
+
+    footer .container{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    footer .menu-link{
+        font-size: 0.8rem;
+    }
+}
+
+@media only screen and (min-width:610px){
+    /* Staff Page Styles */
+.staff .container{
+    display: flex;
+    flex-flow: column;
+}
+
+.staff-member{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.staff-card{
+    min-width: 300px;
+    margin-top: 4rem;
+}
+
+}
+
+
+@media only screen and (min-width:670px){
+    /* Mian Style */
+    main .container{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .home article{
+        margin: 0 0.5rem;
+    }
+}
